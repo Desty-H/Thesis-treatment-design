@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=390px,initial-scale=1.0"><title>Instagram</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#FAFAFA;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;max-width:390px;margin:0 auto;font-size:14px;color:#262626;-webkit-font-smoothing:antialiased}.top-nav{position:sticky;top:0;background:#FFF;border-bottom:1px solid #DBDBDB;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;z-index:100;height:44px}.top-nav svg{width:24px;height:24px}.logo{font-family:'Billabong','Segoe Script',cursive;font-size:26px;color:#262626;line-height:1}.top-nav-icons{display:flex;gap:16px;align-items:center}.stories-bar{background:#FFF;border-bottom:1px solid #DBDBDB;padding:10px 12px 12px;display:flex;gap:14px;overflow-x:auto;scrollbar-width:none}.stories-bar::-webkit-scrollbar{display:none}.story-item{display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0;position:relative}.story-ring{width:62px;height:62px;border-radius:50%;background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4);padding:2.5px;display:flex;align-items:center;justify-content:center}.story-ring.no-ring{background:#DBDBDB}.story-avatar{width:55px;height:55px;border-radius:50%;border:2px solid #FFF;object-fit:cover}.story-name{font-size:11px;color:#262626;max-width:66px;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.add-icon{position:absolute;bottom:18px;right:0;width:20px;height:20px;border-radius:50%;background:#0095F6;border:2px solid #FFF;display:flex;align-items:center;justify-content:center;color:#FFF;font-size:14px;line-height:1}.post{background:#FFF;margin-bottom:12px}.post-header{display:flex;align-items:center;padding:10px 12px;gap:10px}.post-avatar{width:32px;height:32px;border-radius:50%;border:1px solid #DBDBDB;object-fit:cover;flex-shrink:0}.post-user-info{flex:1}.post-username{font-weight:600;font-size:13px;color:#262626;line-height:1.3}.post-location{font-size:11px;color:#8E8E8E;line-height:1.3}.post-menu{color:#262626;font-size:18px;letter-spacing:1px}.post-image{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}.post-actions{display:flex;align-items:center;padding:8px 12px 4px;gap:14px}.post-actions .left{display:flex;gap:14px;flex:1}.post-actions svg{width:24px;height:24px;stroke:#262626;fill:none;stroke-width:1.8}.post-likes{padding:0 12px 4px;font-weight:600;font-size:13px}.post-caption{padding:0 12px 4px;font-size:14px;line-height:1.5}.post-caption .un{font-weight:600}.more{color:#8E8E8E}.post-cl{padding:0 12px 4px;color:#8E8E8E;font-size:13px}.post-cm{padding:0 12px 2px;font-size:13px;line-height:1.5}.post-cm .un{font-weight:600}.post-time{padding:4px 12px 10px;font-size:10px;color:#8E8E8E;text-transform:uppercase;letter-spacing:.3px}.divider{height:8px;background:#F0F0F0}.bottom-nav{position:sticky;bottom:0;background:#FFF;border-top:1px solid #DBDBDB;display:flex;justify-content:space-around;align-items:center;padding:10px 0 14px;z-index:100}.bottom-nav svg{width:26px;height:26px}.nav-icon{display:flex;align-items:center;justify-content:center}
+/* Correction post styling */
+.post-correction{background:#FFF;margin-bottom:12px;border:2px solid #1D9E75}.post-correction .post-header{background:#F0FAF6}.verified{display:inline-block;width:14px;height:14px;background:#1D9E75;border-radius:50%;color:#FFF;font-size:9px;font-weight:700;text-align:center;line-height:14px;margin-left:4px}.correction-card{margin:0 12px 12px;background:#F0FAF6;border:1px solid #1D9E75;border-radius:8px;padding:12px}.correction-title{font-weight:700;font-size:13px;color:#1D6E4E;margin-bottom:8px}.bar-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}.bar-label{font-size:11px;color:#333;width:160px;flex-shrink:0;line-height:1.3}.bar-track{flex:1;background:#E0E0E0;border-radius:4px;height:18px;overflow:hidden}.bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:6px}.bar-fill.green{background:#1D9E75}.bar-fill.coral{background:#D85A30}.bar-fill.gray{background:#AAAAAA}.bar-pct{font-size:10px;font-weight:700;color:#FFF}.correction-source{font-size:10px;color:#888;margin-top:8px;line-height:1.4}
+/* No-correction post styling */
+.post-nocorrection{background:#FFF;margin-bottom:12px;border:2px solid #AAAAAA}.post-nocorrection .post-header{background:#F5F5F5}.nocorrection-card{margin:0 12px 12px;background:#F5F5F5;border:1px solid #CCCCCC;border-radius:8px;padding:12px}.nocorrection-title{font-weight:700;font-size:13px;color:#444;margin-bottom:8px}.nocorrection-body{font-size:12px;color:#555;line-height:1.6}.nocorrection-source{font-size:10px;color:#888;margin-top:8px}</style></head><body><div class="top-nav">
+<svg viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+<span class="logo">Instagram</span>
+<div class="top-nav-icons"><svg viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+<svg viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="1.8"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
+</div><div class="stories-bar"><div class="story-item"><div class="story-ring no-ring"><img class="story-avatar" src="https://randomuser.me/api/portraits/men/71.jpg"></div><div class="add-icon">+</div><span class="story-name">Jouw verhaal</span></div><div class="story-item"><div class="story-ring"><img class="story-avatar" src="https://randomuser.me/api/portraits/women/55.jpg"></div><span class="story-name">Roos</span></div><div class="story-item"><div class="story-ring"><img class="story-avatar" src="https://randomuser.me/api/portraits/men/83.jpg"></div><span class="story-name">Arjan</span></div><div class="story-item"><div class="story-ring"><img class="story-avatar" src="https://randomuser.me/api/portraits/women/48.jpg"></div><span class="story-name">Lotte</span></div><div class="story-item"><div class="story-ring"><img class="story-avatar" src="https://randomuser.me/api/portraits/men/29.jpg"></div><span class="story-name">Tom</span></div><div class="story-item"><div class="story-ring"><img class="story-avatar" src="https://randomuser.me/api/portraits/women/60.jpg"></div><span class="story-name">Hanneke</span></div></div><div class="post">
+<div class="post-header"><img class="post-avatar" src="https://randomuser.me/api/portraits/men/71.jpg" alt=""><div class="post-user-info"><div class="post-username">bertjan_delft</div><div class="post-location">Delft</div></div><div class="post-menu">···</div></div>
+<img class="post-image" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="">
+<div class="post-actions"><div class="left"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+<div class="post-likes">189 mensen vinden dit leuk</div>
+<div class="post-caption"><span class="un">bertjan_delft</span> Meer overheidswoningen klinkt sociaal, maar verhuurders trekken zich dan terug uit de markt. Je lost een tekort niet op door het aanbod verder te beperken. <span class="more">meer</span></div>
+<div class="post-cl">Alle 15 reacties bekijken</div>
+<div class="post-cm"><span class="un">arjan_alkmaar</span> Interessant om te lezen 👍</div>
+<div class="post-cm"><span class="un">tom_utrecht88</span> Klopt helemaal</div>
+<div class="post-time">2 uur geleden</div>
+</div><div class="divider"></div><div class="post">
+<div class="post-header"><img class="post-avatar" src="https://randomuser.me/api/portraits/women/55.jpg" alt=""><div class="post-user-info"><div class="post-username">roos_venlo</div><div class="post-location">Venlo</div></div><div class="post-menu">···</div></div>
+<img class="post-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="">
+<div class="post-actions"><div class="left"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+<div class="post-likes">143 mensen vinden dit leuk</div>
+<div class="post-caption"><span class="un">roos_venlo</span> Huurprijscontrole helpt zittende huurders, maar ontmoedigt nieuwbouw. Als investeerders geen rendement kunnen maken, bouwen ze elders. Dan wordt het tekort alleen maar groter. <span class="more">meer</span></div>
+<div class="post-cl">Alle 10 reacties bekijken</div>
+<div class="post-cm"><span class="un">hanneke_breda</span> Goed punt, moeilijk onderwerp</div>
+<div class="post-cm"><span class="un">bertjan_delft</span> Precies 👍</div>
+<div class="post-time">4 uur geleden</div>
+</div><div class="divider"></div><div class="post">
+<div class="post-header"><img class="post-avatar" src="https://randomuser.me/api/portraits/men/83.jpg" alt=""><div class="post-user-info"><div class="post-username">arjan_alkmaar</div><div class="post-location">Alkmaar</div></div><div class="post-menu">···</div></div>
+<img class="post-image" src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80" alt="">
+<div class="post-actions"><div class="left"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+<div class="post-likes">167 mensen vinden dit leuk</div>
+<div class="post-caption"><span class="un">arjan_alkmaar</span> Ik snap de bezorgdheid over woningprijzen. Maar overheidsinterventie heeft een trackrecord van inefficiëntie en vertraging. Vergunningsvereenvoudiging en deregulering lossen meer op dan nieuwe regels. <span class="more">meer</span></div>
+<div class="post-cl">Alle 19 reacties bekijken</div>
+<div class="post-cm"><span class="un">eline_leiden</span> Interessant perspectief</div>
+<div class="post-cm"><span class="un">maurits_deventer</span> Hier ben ik het mee eens</div>
+<div class="post-time">7 uur geleden</div>
+</div><div class="divider"></div><div class="post">
+<div class="post-header"><img class="post-avatar" src="https://randomuser.me/api/portraits/women/48.jpg" alt=""><div class="post-user-info"><div class="post-username">lotte_maastricht</div><div class="post-location">Maastricht</div></div><div class="post-menu">···</div></div>
+<img class="post-image" src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=600&q=80" alt="">
+<div class="post-actions"><div class="left"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+<div class="post-likes">201 mensen vinden dit leuk</div>
+<div class="post-caption"><span class="un">lotte_maastricht</span> Als overheid bouwt, verliezen private partijen de prikkel om te innoveren. Kostenefficiënte bouw voor grote aantallen vraagt juist om marktconcurrentie, niet om overheidsproductie. <span class="more">meer</span></div>
+<div class="post-cl">Alle 16 reacties bekijken</div>
+<div class="post-cm"><span class="un">roos_venlo</span> Klopt helemaal wat je zegt 👍</div>
+<div class="post-cm"><span class="un">bertjan_delft</span> Goed punt</div>
+<div class="post-time">10 uur geleden</div>
+</div><div class="divider"></div><div class="post">
+<div class="post-header"><img class="post-avatar" src="https://randomuser.me/api/portraits/men/29.jpg" alt=""><div class="post-user-info"><div class="post-username">tom_utrecht88</div><div class="post-location">Utrecht</div></div><div class="post-menu">···</div></div>
+<img class="post-image" src="https://images.unsplash.com/photo-1549517045-bc93de075e53?w=600&q=80" alt="">
+<div class="post-actions"><div class="left"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+<div class="post-likes">212 mensen vinden dit leuk</div>
+<div class="post-caption"><span class="un">tom_utrecht88</span> Extra belasting voor woningmarktinterventie raakt ook de mensen die we willen helpen. Starters die net werken, betalen mee aan subsidies voor anderen. Dat is geen eerlijk systeem. <span class="more">meer</span></div>
+<div class="post-cl">Alle 24 reacties bekijken</div>
+<div class="post-cm"><span class="un">arjan_alkmaar</span> Helemaal mee eens</div>
+<div class="post-cm"><span class="un">lotte_maastricht</span> Zo had ik het nog niet bekeken 🤔</div>
+<div class="post-time">14 uur geleden</div>
+</div><div class="divider"></div><div class="post">
+<div class="post-header"><img class="post-avatar" src="https://randomuser.me/api/portraits/women/60.jpg" alt=""><div class="post-user-info"><div class="post-username">hanneke_breda</div><div class="post-location">Breda</div></div><div class="post-menu">···</div></div>
+<img class="post-image" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80" alt="">
+<div class="post-actions"><div class="left"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+<div class="post-likes">154 mensen vinden dit leuk</div>
+<div class="post-caption"><span class="un">hanneke_breda</span> Overheidsaankopen van grond kosten tientallen miljoenen. Dat geld kan ook in onderwijs of zorg. De vraag is of wonen altijd de hoogste prioriteit moet zijn. <span class="more">meer</span></div>
+<div class="post-cl">Alle 11 reacties bekijken</div>
+<div class="post-cm"><span class="un">tom_utrecht88</span> Goede vraag om te stellen</div>
+<div class="post-cm"><span class="un">maurits_deventer</span> Interessant om te lezen</div>
+<div class="post-time">1 dag geleden</div>
+</div><div class="divider"></div><div class="post">
+<div class="post-header"><img class="post-avatar" src="https://randomuser.me/api/portraits/men/41.jpg" alt=""><div class="post-user-info"><div class="post-username">maurits_deventer</div><div class="post-location">Deventer</div></div><div class="post-menu">···</div></div>
+<img class="post-image" src="https://images.unsplash.com/photo-1567496898669-ee935f5f647a?w=600&q=80" alt="">
+<div class="post-actions"><div class="left"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+<div class="post-likes">178 mensen vinden dit leuk</div>
+<div class="post-caption"><span class="un">maurits_deventer</span> Bescherming van bestaande huurders is begrijpelijk. Maar als verhuurders massaal verkopen omdat de regels te streng worden, verdwijnt het middenhuursegment. Dan helpen we een kleine groep ten koste van velen. <span class="more">meer</span></div>
+<div class="post-cl">Alle 13 reacties bekijken</div>
+<div class="post-cm"><span class="un">roos_venlo</span> Moeilijk onderwerp, goed gezegd</div>
+<div class="post-cm"><span class="un">eline_leiden</span> Klopt helemaal 👍</div>
+<div class="post-time">2 dagen geleden</div>
+</div><div class="divider"></div><div class="post">
+<div class="post-header"><img class="post-avatar" src="https://randomuser.me/api/portraits/women/33.jpg" alt=""><div class="post-user-info"><div class="post-username">eline_leiden</div><div class="post-location">Leiden</div></div><div class="post-menu">···</div></div>
+<img class="post-image" src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?w=600&q=80" alt="">
+<div class="post-actions"><div class="left"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+<div class="post-likes">163 mensen vinden dit leuk</div>
+<div class="post-caption"><span class="un">eline_leiden</span> Ik geloof niet dat meer regelgeving de kern van het probleem oplost. Ruimtelijke ordening is complex en vergt tijd. Hoe meer de overheid ingrijpt, hoe groter de kans op beleidsfouten die decennia nazinderen. <span class="more">meer</span></div>
+<div class="post-cl">Alle 8 reacties bekijken</div>
+<div class="post-cm"><span class="un">hanneke_breda</span> Interessant perspectief</div>
+<div class="post-cm"><span class="un">bertjan_delft</span> Hier ben ik het mee eens</div>
+<div class="post-time">3 dagen geleden</div>
+</div><div class="divider"></div><div class="post-correction">
+<div class="post-header">
+  <img class="post-avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/I%26O_Research_logo.svg/200px-I%26O_Research_logo.svg.png" alt="ioresearch" style="object-fit:contain;background:#fff">
+  <div class="post-user-info">
+    <div class="post-username">ioresearch_nl <span class="verified">✓</span></div>
+    <div class="post-location">Onderzoeksbureau · Nederland</div>
+  </div>
+  <div class="post-menu">···</div>
+</div>
+<div class="correction-card">
+  <div class="correction-title">📊 Wat vindt Nederland over woningbeleid?</div>
+  <div class="bar-row">
+    <div class="bar-label">Vóór sterkere overheidsinterventie</div>
+    <div class="bar-track"><div class="bar-fill green" style="width:52%"><span class="bar-pct">52%</span></div></div>
+  </div>
+  <div class="bar-row">
+    <div class="bar-label">Tegen sterkere overheidsinterventie</div>
+    <div class="bar-track"><div class="bar-fill coral" style="width:31%"><span class="bar-pct">31%</span></div></div>
+  </div>
+  <div class="bar-row">
+    <div class="bar-label">Neutraal / geen mening</div>
+    <div class="bar-track"><div class="bar-fill gray" style="width:17%"><span class="bar-pct">17%</span></div></div>
+  </div>
+  <div class="correction-source">Bron: I&amp;O Research Politieke Barometer, april 2024. N = 2.500 Nederlandse volwassenen, representatief naar leeftijd, geslacht en opleidingsniveau.</div>
+</div>
+<div class="post-actions"><div class="left"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
+<div class="post-time">gesponsord</div>
+</div><div class="divider"></div><div class="bottom-nav">
+<div class="nav-icon"><svg viewBox="0 0 24 24" fill="#262626" stroke="none"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+<div class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#8E8E8E" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+<div class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#8E8E8E" stroke-width="1.8"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+<div class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#8E8E8E" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+<div class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#8E8E8E" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+</div></body></html>
